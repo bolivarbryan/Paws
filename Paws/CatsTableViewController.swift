@@ -65,7 +65,8 @@ class CatsTableViewController: PFQueryTableViewController {
             cell = NSBundle.mainBundle().loadNibNamed("CatsTableViewCell", owner: self, options: nil)[0] as? CatsTableViewCell
         }
         
-        if let pfObject = object {
+        
+        if let pfObject:PFObject = object {
             cell?.catNameLabel?.text = pfObject["name"] as? String
             
             var votes:Int? = pfObject["votes"] as? Int
@@ -78,27 +79,24 @@ class CatsTableViewController: PFQueryTableViewController {
             if credit != nil {
                 cell?.catCreditLabel?.text = "\(credit!) / CC 2.0"
             }
-        }
         
         cell?.catImageView?.image = nil
-        if var urlString:String? = PFObject["url"] as? String {
-            var url:NSURL? = NSURL(string: urlString!)
+        if let urlString:String? = pfObject["url"] as? String {
             
-            if var url:NSURL? = NSURL(string: urlString!) {
-                var error:NSError?
-                var request:NSURLRequest = NSURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 5.0)
+            if let url:NSURL = NSURL(string: urlString!) {
+                let request:NSURLRequest = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 5.0)
                 
                 NSOperationQueue.mainQueue().cancelAllOperations()
                 
-                NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
-                    (response:NSURLResponse!, imageData:NSData!, error:NSError!) -> Void in
-                    
-                    (cell?.catImageView?.image = UIImage(data: imageData))!
-                    
+                NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+                    (cell?.catImageView?.image = UIImage(data: data!))!
+
                 })
+                
+               
             }
         }
-        
+        }
         return cell
     }
 }
