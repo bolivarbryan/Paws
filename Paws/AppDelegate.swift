@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Parse.setApplicationId("fx9dXL7E0PEs3K7go5i7Z00qVGfG2S1t1tScbDTL", clientKey: "cIiv08cDJenGlHk4ISe92JDitOE0As5AtV8n6Dhs")
+        Parse.setApplicationId("fx9dXL7E0PEs3K7go5i7Z00qVGfG2S1t1tScbDTL", clientKey: "hJ2vDREYtf3SOaZk4DNRX511iVZGe28iVMt4Cx7l")
         
         let tableVC:CatsTableViewController = CatsTableViewController(className: "Cat")
         tableVC.title = "Paws"

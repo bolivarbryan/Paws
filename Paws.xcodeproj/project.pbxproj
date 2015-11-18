@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166BC4151BFBF0590001906F /* CatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166BC4131BFBF0590001906F /* CatsTableViewCell.swift */; };
+		166BC4161BFBF0590001906F /* CatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 166BC4141BFBF0590001906F /* CatsTableViewCell.xib */; };
 		16F79C871BFB92340029DD68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F79C861BFB92340029DD68 /* AppDelegate.swift */; };
 		16F79C891BFB92350029DD68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F79C881BFB92350029DD68 /* ViewController.swift */; };
 		16F79C8C1BFB92350029DD68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F79C8A1BFB92350029DD68 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		166BC4131BFBF0590001906F /* CatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsTableViewCell.swift; sourceTree = "<group>"; };
+		166BC4141BFBF0590001906F /* CatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatsTableViewCell.xib; sourceTree = "<group>"; };
 		16F79C831BFB92340029DD68 /* Paws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F79C861BFB92340029DD68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16F79C881BFB92350029DD68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				16F79C921BFB92350029DD68 /* Info.plist */,
 				16F79CB41BFB98B70029DD68 /* Paws-Bridging-Header.h */,
 				16F79CB81BFB9E950029DD68 /* CatsTableViewController.swift */,
+				166BC4131BFBF0590001906F /* CatsTableViewCell.swift */,
+				166BC4141BFBF0590001906F /* CatsTableViewCell.xib */,
 			);
 			path = Paws;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166BC4161BFBF0590001906F /* CatsTableViewCell.xib in Resources */,
 				16F79C911BFB92350029DD68 /* LaunchScreen.storyboard in Resources */,
 				16F79C8E1BFB92350029DD68 /* Assets.xcassets in Resources */,
 				16F79C8C1BFB92350029DD68 /* Main.storyboard in Resources */,
@@ -336,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166BC4151BFBF0590001906F /* CatsTableViewCell.swift in Sources */,
 				16F79C891BFB92350029DD68 /* ViewController.swift in Sources */,
 				16F79CB91BFB9E950029DD68 /* CatsTableViewController.swift in Sources */,
 				16F79C871BFB92340029DD68 /* AppDelegate.swift in Sources */,
