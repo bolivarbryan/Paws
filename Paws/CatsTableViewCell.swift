@@ -31,15 +31,12 @@ class CatsTableViewCell: PFTableViewCell {
         catPawIcon?.hidden = false
         catPawIcon?.alpha = 1.0
         
-        UIView.animateWithDuration(1.0, delay: 1.0, options:nil, animations: {
-            
+        UIView.animateWithDuration(1, delay: 1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.catPawIcon?.alpha = 0
-            
-            }, completion: {
-                (value:Bool) in
-                
+
+            }) { (complete) -> Void in
                 self.catPawIcon?.hidden = true
-        })
+        }
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
