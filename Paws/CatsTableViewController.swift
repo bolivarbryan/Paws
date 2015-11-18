@@ -81,7 +81,7 @@ class CatsTableViewController: PFQueryTableViewController {
         }
         
         cell?.catImageView?.image = nil
-        if var urlString:String? = PFObject["url"] as? String {
+        if var urlString:String? = pfObject["url"] as? String {
             var url:NSURL? = NSURL(string: urlString!)
             
             if var url:NSURL? = NSURL(string: urlString!) {
